@@ -1,1 +1,110 @@
-<p>home-page works!</p>
+<header id="header" class="container-fluid d-flex">
+
+  <div id="img" class="w-75">
+    <img id="img2" class="img-fluid w-50" src="./assets/img/logo.png" alt="Logo da Loja">
+  </div>
+
+  <nav class="container-fluid">
+
+    <div class="d-flex align-items-center justify-content-around">
+
+      <button class="h-25 btn btn-secondary">Sobre</button>
+
+      <div class="w-25">
+        <select class="w-75 form-select" aria-label="Default select example">
+          <option disabled selected>Categorias...</option>
+          <option value="computadores">Computadores</option>
+          <option value="componentes">Componentes</option>
+          <option value="perifericos">Periféricos</option>
+        </select>
+      </div>
+
+      <button id="btn1" style="width: 10%; height: 10%;" class="btn btn-secondary"><img class="w-50 img-fluid"
+          src="./assets/img/BuyCar.png" alt="Carrinho de Compras"></button>
+
+      <button id="btn2" style="width: 10%;" class="btn btn-secondary">Login <img class="w-50 img-fluid"
+          src="./assets/img/LoginButton.png" alt="login"></button>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<section style="height: 500px;" class="container rounded-5 bg-secondary text-center mt-5">
+
+  <div id="containerOferta">
+
+    <h1 id="text" class="text-white">Oferta - Somente Hoje</h1>
+
+    <div id="oferta" class="d-flex mt-5 justify-content-around">
+
+      <img id="imgOferta" class="img-fluid w-25 rounded-5" src="./assets/img/Pc.jpg" alt="Computador">
+
+      <div class="oferta-info-pc">
+        <h2 class="text-white bg-danger rounded-2 p-1">De R$ 3.900,00 POR R$ 3.000,00</h2>
+
+        <h3 class="text-white mt-3">Computador Gamer Seven</h3>
+
+        <ul class="list-group list-group-flush rounded-1">
+          <li class="list-group-item">I7-9900k</li>
+          <li class="list-group-item">GTX 1080 TI</li>
+          <li class="list-group-item">16 Gb RAM</li>
+          <li class="list-group-item">1 Tb</li>
+          <li class="list-group-item">256 Gb SSD</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="container-fluid mt-5 flex-wrap">
+
+  <h2 id="computador" >{{title[0]}}</h2>
+  <div id="pcs" class="d-flex justify-content-between mt-5 mb-5">
+
+    <div *ngFor="let pc of pcs" id={{pc.id}} class="card shadow" style="width: 15rem;">
+      <img src={{pc.imageUrl}} class="card-img-top" alt="Computador">
+      <div class="card-body">
+        <h5 class="card-title">{{pc.title}}</h5>
+        <p class="card-text">{{pc.textBody[0]}} <br> {{pc.textBody[1]}} <br> {{pc.textBody[2]}} <br> {{pc.textBody[3]}} <br> {{pc.textBody[4]}}</p>
+        <a class="btn btn-success">Comprar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 id="periferico" >{{title[1]}}</h2>
+  <div id="perifericos" class="d-flex justify-content-between mt-5 mb-5">
+
+    <div *ngFor="let perfiferico of perfifericos" id={{perfiferico.id}} class="card shadow" style="width: 15rem;">
+      <img src={{perfiferico.imageUrl}} class="card-img-top" alt="Computador">
+      <div class="card-body">
+        <h5 class="card-title">{{perfiferico.title}}</h5>
+        <p class="card-text">{{perfiferico.textBody}}</p>
+        <a class="btn btn-success">Comprar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 id="componentes" >{{title[2]}}</h2>
+  <div id="componente" class="d-flex justify-content-between mt-5 mb-5">
+
+    <div *ngFor="let component of componente" id={{component.id}} class="card shadow" style="width: 15rem;">
+      <img src={{component.imageUrl}} class="card-img-top" alt="Computador">
+      <div class="card-body">
+        <h5 class="card-title">{{component.title}}</h5>
+        <p class="card-text">{{component.textBody}}</p>
+        <a class="btn btn-success">Comprar</a>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
