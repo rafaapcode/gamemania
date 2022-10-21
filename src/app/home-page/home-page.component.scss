@@ -1,0 +1,70 @@
+@media (max-width: 420px) {
+  #header {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  #img {
+    display: none;
+  }
+
+  #img2 {
+    width: 100% !important;
+  }
+
+  #btn1 {
+    width: 20% !important;
+  }
+
+  #btn2 {
+    width: 20% !important;
+  }
+
+  #oferta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 500px;
+  }
+
+  #imgOferta {
+    margin-bottom: 2%;
+    width: 40% !important;
+  }
+
+  #text {
+    display: none;
+  }
+
+  #computador, #periferico, #componentes {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #pcs, #perifericos, #componente{
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 3100px;
+    align-items: center;
+  }
+
+  #pc1, #pc2, #pc3, #pc4, #pc5 {
+    width: 90% !important;
+  }
+
+  #p1, #p2, #p3, #p4, #p5 {
+    width: 90% !important;
+  }
+
+  #c1, #c2, #c3, #c4, #c5 {
+    width: 90% !important;
+  }
+
+  #alerta{
+    width: 90% !important;
+  }
+
+}
