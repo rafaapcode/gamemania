@@ -26,10 +26,14 @@
     </div>
 
 
-    <button [disabled]="!formCliente.valid" (click)="entrar()"
-      class="container-fluid p-2 rounded border-2 w-25 mx-auto row d-md-flex justify-content-md-end">
-      <a href="http://localhost:4200/homepage" class="text-decoration-none text-secondary">Login</a>
-    </button>
+    <div class="container-fluid row d-md-flex justify-content-md-end mt-5">
+      <button [disabled]="!formCliente.valid" id="btnLoginGoogle" type="button"
+        class="row-sm-12 w-25 btn btn-outline-secondary mx-auto position-relative" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        <a href="http://localhost:4200/homepage" style="width: 20%;" target="_blank" role="button"
+          class="text-decoration-none text-primary">Login</a>
+      </button>
+    </div>
 
     <div class="mt-5">
       <div class="bg-secondary p-1 w-75 mx-auto"></div>
@@ -40,7 +44,7 @@
         class="row-sm-12 w-25 btn btn-outline-secondary mx-auto position-relative" data-bs-toggle="modal"
         data-bs-target="#staticBackdrop">
         <a href="http://localhost:4200/homepage" style="width: 20%;" target="_blank" role="button"
-          class="text-decoration-none text-secondary">Login com <img src="./assets/img/LogoGoogle.png" alt="Logo Google"
+          class="text-decoration-none text-primary">Login com <img src="./assets/img/LogoGoogle.png" alt="Logo Google"
             class="position-absolute me-5 end-0 me-3" style="width: 10%;"></a>
       </button>
     </div>
