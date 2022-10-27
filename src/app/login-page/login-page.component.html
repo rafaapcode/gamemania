@@ -1,35 +1,49 @@
 <div class="container text-center"><img src="./assets/img/logo.png" alt="Logo da Loja"></div>
 
-  <section class="container mt-5 mx-auto">
+<section class="container mt-5 mx-auto">
+
+  <form action="" *ngIf="formCliente" [formGroup]="formCliente">
 
     <div class="form-floating mb-5 w-75 mx-auto">
 
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input formControlName="cliente_name" type="email" class="form-control" id="floatingInput"
+        placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
-
+      <p class="text-danger" *ngIf="(cliente_nome) && (cliente_nome.errors) && (cliente_nome.dirty)">O email é
+        obrigatório</p>
     </div>
     <div class="form-floating w-50 mb-5 w-75 mx-auto">
 
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input formControlName="cliente_pass" type="password" class="form-control" id="floatingPassword"
+        placeholder="Password">
       <label for="floatingPassword">Password</label>
 
+      <div *ngIf="(cliente_pass) && (cliente_pass.errors) && (cliente_pass.dirty)">
+        <p *ngIf="cliente_pass.errors['required']" class="text-danger">
+          A senha é obrigatória
+        </p>
+      </div>
     </div>
 
-    <div  class="container-fluid row d-md-flex justify-content-md-end">
-      <a id="btnLogin" class="col-sm-12 btn btn-outline-secondary w-25 mx-auto" href="http://localhost:4200/homepage" target="_blank" role="button">Login</a>
-    </div>
+
+    <button [disabled]="!formCliente.valid" (click)="entrar()"
+      class="container-fluid border border-0 bg-transparent w-25 mx-auto row d-md-flex justify-content-md-end">
+      <button [disabled]="!formCliente.valid" id="btnLogin" class="col-sm-12 btn btn-outline-secondary w-100 mx-auto"
+        role="button">Login</button>
+    </button>
 
     <div class="mt-5">
       <div class="bg-secondary p-1 w-75 mx-auto"></div>
     </div>
 
     <div class="container-fluid row d-md-flex justify-content-md-end mt-5">
-      <button id="btnLoginGoogle" type="button" class="row-sm-12 w-25 btn btn-outline-secondary mx-auto position-relative" data-bs-toggle="modal"
+      <button [disabled]="!formCliente.valid" id="btnLoginGoogle" type="button"
+        class="row-sm-12 w-25 btn btn-outline-secondary mx-auto position-relative" data-bs-toggle="modal"
         data-bs-target="#staticBackdrop">
         <a style="width: 20%;" target="_blank" role="button">Login com <img src="./assets/img/LogoGoogle.png"
             alt="Logo Google" class="position-absolute me-5 end-0 me-3" style="width: 10%;"></a>
       </button>
     </div>
+  </form>
 
-  </section>
-
+</section>
