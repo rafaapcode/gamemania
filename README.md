@@ -9,3 +9,6 @@
   - ``` npm i ```
 4. Para rodar o site, digite o comando : ``` npm start ```
 5. Acesso o site pelo servidor http://localhost:4200/ 
+
+
+## Adicionando validação ao nosso Formulário
