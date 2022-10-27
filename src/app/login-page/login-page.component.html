@@ -20,7 +20,7 @@
 
       <div *ngIf="(cliente_pass) && (cliente_pass.errors) && (cliente_pass.dirty)">
         <p *ngIf="cliente_pass.errors['required']" class="text-danger">
-          A senha é obrigatória
+          A senha é obrigatória e deve conter entre 4 e 8 caracteres
         </p>
       </div>
     </div>
