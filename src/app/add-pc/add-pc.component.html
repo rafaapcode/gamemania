@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <form>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Image Url" matInput [(ngModel)]="addpc.urlImg" name="imgUrl">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Title" matInput [(ngModel)]="addpc.title" name="title">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Description" matInput [(ngModel)]="addpc.description" name="description">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="cadastrarPc()">Submit</button>
+  </form>
+</div>

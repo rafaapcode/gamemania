@@ -1,0 +1,14 @@
+{
+  "pc": [
+    {
+      "id": "c1",
+      "urlImg": "../src/assets/img/Processador.jpg",
+      "title": "Processador",
+      "description": [
+        "8 Núcleos",
+        "2.5 mb cache",
+        "2.5 GHZ"
+      ]
+    }
+  ]
+}

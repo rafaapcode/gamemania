@@ -7,19 +7,27 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddPcComponent } from './add-pc/add-pc.component';
+import { AddPerifericoComponent } from './add-periferico/add-periferico.component';
+import { AddComponenteComponent } from './add-componente/add-componente.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    AddPcComponent,
+    AddPerifericoComponent,
+    AddComponenteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
