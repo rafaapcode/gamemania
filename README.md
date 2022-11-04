@@ -12,3 +12,7 @@
 
 
 ## Adicionando validação ao nosso Formulário
+
+
+https://user-images.githubusercontent.com/83471941/198387530-ce185f8b-8858-4d5a-8597-458b3ddd633e.mp4
+
