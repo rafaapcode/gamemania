@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class AddPcComponent implements OnInit {
 
   addpc:CadastroPc = {
-    id: 1,
     urlImg: '',
     title: 'Processador maroto',
     description: 'Processador 2 núcleos, com 2.5ghz'
