@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cadastro } from '../Models';
-import { CadastroServicePeriferico } from '../cadastroPeriferico/cadastro.service';
+import { CadastroPeriferico } from '../cadastroPeriferico/cadastro.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,19 +12,22 @@ export class AddPerifericoComponent implements OnInit {
 
   addperiferico:Cadastro = {
     urlImg: '',
-    title: 'Teclado Mecânico',
-    description: 'Teclas removíveis'
+    title: '',
+    description: ''
   }
 
-  constructor(private addperifericoservice:CadastroServicePeriferico, private router:Router) { }
+  constructor(private addperifericoservice:CadastroPeriferico, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   cadastrarPeriferico(): void{
     this.addperifericoservice.create(this.addperiferico).subscribe(() => {
-      this.addperifericoservice.showmessage('Pc cadastrado');
-    })
+      this.addperifericoservice.showmessage('Periferico cadastrado');
+    });
+    setTimeout(() => {
+      this.router.navigate(['/homepage'])
+    }, 3000)
   }
 
 }

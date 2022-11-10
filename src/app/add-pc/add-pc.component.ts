@@ -1,5 +1,5 @@
 import { Cadastro } from '../Models';
-import { CadastroServicePc } from '../cadastroPc/cadastro.service';
+import { CadastroPc } from '../cadastroPc/cadastro.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -12,11 +12,11 @@ export class AddPcComponent implements OnInit {
 
   addpc:Cadastro = {
     urlImg: '',
-    title: 'Pc da Nasa',
-    description: 'Processador 2 núcleos, GTX 1080TI'
+    title: '',
+    description: ''
   }
 
-  constructor(private addpcservice:CadastroServicePc, private router:Router) { }
+  constructor(private addpcservice:CadastroPc, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +24,11 @@ export class AddPcComponent implements OnInit {
   cadastrarPc(): void{
     this.addpcservice.create(this.addpc).subscribe(() => {
       this.addpcservice.showmessage('Pc cadastrado');
-    })
+    });
+
+    setTimeout(() => {
+      this.router.navigate(['/homepage'])
+    }, 3000)
   }
 
 }

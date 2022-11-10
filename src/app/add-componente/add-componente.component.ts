@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cadastro } from '../Models';
-import { CadastroServiceComponent } from '../cadastroComponent/cadastro.service';
+import { CadastroComponent } from '../cadastroComponent/cadastro.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,19 +12,23 @@ export class AddComponenteComponent implements OnInit {
 
   addcomponent:Cadastro = {
     urlImg: '',
-    title: 'Processador',
-    description: 'Processador 2 núcleos, com 2.5ghz'
+    title: '',
+    description: ''
   }
 
-  constructor(private addcomponentservice:CadastroServiceComponent, private router:Router) { }
+  constructor(private addcomponentservice:CadastroComponent, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   cadastrarComponent(): void{
     this.addcomponentservice.create(this.addcomponent).subscribe(() => {
-      this.addcomponentservice.showmessage('Pc cadastrado');
+      this.addcomponentservice.showmessage('Componente cadastrado');
     })
+
+    setTimeout(() => {
+      this.router.navigate(['/homepage'])
+    }, 3000)
   }
 
 }

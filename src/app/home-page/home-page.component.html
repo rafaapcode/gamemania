@@ -64,42 +64,43 @@
 
 <section class="container-fluid mt-5 flex-wrap">
 
-  <h2 id="computador" >Computadores</h2>  <button class="btn btn-primary"><a href="http://localhost:4200/addpc">Add PC</a></button>
-  <div id="pcs" class="d-flex justify-content-between mt-5 mb-5">
+  <h2 id="computador" >Computadores</h2>  <button class="btn btn-primary"><a class="text-light text-decoration-none" href="http://localhost:4200/addpc">Add PC</a></button>
+  <div id="pcs" class="d-flex gap-2 mt-5 mb-5">
 
-    <div class="card shadow" style="width: 15rem;">
-      <img src='' class="card-img-top" alt="Computador">
+    <div id="{{ pc.id }}" class="card shadow" style="width: 15rem;" *ngFor="let pc of cadastrosPc">
+      <img src="{{ pc.urlImg }}" class="card-img-top" alt="Computador">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
+        <h5 class="card-title">{{ pc.title }}</h5>
+        <p class="card-text">{{ pc.description }}</p>
         <a class="btn btn-success">Comprar</a>
       </div>
     </div>
 
   </div>
 
-  <h2 id="periferico" >Perifericos</h2> <button class="btn btn-primary"><a href="http://localhost:4200/addperiferico">Add Periferico</a></button>
-  <div id="perifericos" class="d-flex justify-content-between mt-5 mb-5">
 
-    <div class="card shadow" style="width: 15rem;">
-      <img src='' class="card-img-top" alt="Computador">
+  <h2 id="periferico" >Perifericos</h2> <button class="btn btn-primary"><a class="text-light text-decoration-none" href="http://localhost:4200/addperiferico">Add Periferico</a></button>
+  <div id="perifericos" class="d-flex gap-2 mt-5 mb-5">
+
+    <div id="{{ periferico.id }}" class="card shadow" style="width: 15rem;" *ngFor="let periferico of cadastrosPeriferico">
+      <img src="{{ periferico.urlImg }}" class="card-img-top" alt="Computador">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
+        <h5 class="card-title">{{ periferico.title }}</h5>
+        <p class="card-text">{{ periferico.description }}</p>
         <a class="btn btn-success">Comprar</a>
       </div>
     </div>
 
   </div>
 
-  <h2 id="componentes" >Componentes</h2> <button class="btn btn-primary"><a href="http://localhost:4200/addcomponent">Add Component</a></button>
-  <div id="componente" class="d-flex justify-content-between mt-5 mb-5">
+  <h2 id="componentes" >Componentes</h2> <button class="btn btn-primary"><a class="text-light text-decoration-none" href="http://localhost:4200/addcomponent">Add Component</a></button>
+  <div id="componente" class="d-flex gap-2 mt-5 mb-5">
 
-    <div class="card shadow" style="width: 15rem;">
-      <img src='' class="card-img-top" alt="Computador">
+    <div id="{{ componente.id }}" class="card shadow" style="width: 15rem;" *ngFor="let componente of cadastrosComponente">
+      <img src="{{ componente.urlImg }}" class="card-img-top" alt="Computador">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
+        <h5 class="card-title">{{ componente.title }}</h5>
+        <p class="card-text">{{ componente.description }}</p>
         <a class="btn btn-success">Comprar</a>
       </div>
     </div>
