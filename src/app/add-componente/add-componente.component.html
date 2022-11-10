@@ -1,1 +1,16 @@
-<p>add-componente works!</p>
+<div class="container mt-5">
+  <form>
+    <div class="mb-3">
+      <input type="text" class="form-control" [(ngModel)]="addcomponent.urlImg" placeholder="Image Url" name="imgUrl">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" [(ngModel)]="addcomponent.title" placeholder="Title" name="title">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" [(ngModel)]="addcomponent.description" placeholder="Description"
+        name="description">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="cadastrarComponent()">Submit</button>
+  </form>
+</div>

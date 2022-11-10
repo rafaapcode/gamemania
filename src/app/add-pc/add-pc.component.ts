@@ -1,5 +1,5 @@
-import { CadastroPc } from './addpc.models';
-import { AddpcService } from './../cadastro/addpc.service';
+import { Cadastro } from '../Models';
+import { CadastroServicePc } from '../cadastroPc/cadastro.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class AddPcComponent implements OnInit {
 
-  addpc:CadastroPc = {
+  addpc:Cadastro = {
     urlImg: '',
-    title: 'Processador maroto',
-    description: 'Processador 2 núcleos, com 2.5ghz'
+    title: 'Pc da Nasa',
+    description: 'Processador 2 núcleos, GTX 1080TI'
   }
 
-  constructor(private addpcservice:AddpcService, private router:Router) { }
+  constructor(private addpcservice:CadastroServicePc, private router:Router) { }
 
   ngOnInit(): void {
   }

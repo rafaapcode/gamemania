@@ -1,4 +1,4 @@
-export interface CadastroPc{
+export interface Cadastro{
   id?: number;
   urlImg: string;
   title: string;

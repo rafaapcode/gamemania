@@ -1,10 +1,8 @@
 {
   "pc": [
-    {
-      "id": "c1",
-      "urlImg": "../src/assets/img/Processador.jpg",
-      "title": "Processador",
-      "description": "Alguma string"
-    }
+  ],
+  "component": [
+  ],
+  "periferico": [
   ]
 }
