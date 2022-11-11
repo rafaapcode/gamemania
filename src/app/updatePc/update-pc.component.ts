@@ -4,40 +4,29 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-add-pc',
-  templateUrl: './add-pc.component.html',
-  styleUrls: ['./add-pc.component.scss']
+  selector: 'app-update-pc',
+  templateUrl: './update-pc.component.html',
+  styleUrls: ['./update-pc.component.scss']
 })
-export class AddPcComponent implements OnInit {
-
-  addpc:Cadastro = {
-    urlImg: '',
-    title: '',
-    description: ''
-  }
+export class UpdatePcComponent implements OnInit {
 
   updatePc:Cadastro;
 
   constructor(private addpcservice:CadastroPc, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-
+    const id = Number(this.route.snapshot.paramMap.get("id"));
+    this.addpcservice.readById(id).subscribe(pc => {
+      this.updatePc = pc;
+    })
   }
 
-  cadastrarPc(): void{
-    this.addpcservice.create(this.addpc).subscribe(() => {
-      this.addpcservice.showmessage('Pc cadastrado');
-    });
-
-    setTimeout(() => {
-      this.router.navigate(['/homepage'])
-    }, 3000)
-  }
-
-  updateCadastro():void {
+  updateCadastroPc():void {
     this.addpcservice.updateCadastro(this.updatePc).subscribe(pc => {
       this.addpcservice.showmessage('PC atualizado com sucesso !!');
-      this.router.navigate(['/homepage']);
+      setTimeout(() => {
+        this.router.navigate(['/homepage']);
+      }, 2000)
     })
   }
 

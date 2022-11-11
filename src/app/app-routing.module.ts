@@ -1,3 +1,4 @@
+import { UpdatePcComponent } from './updatePc/update-pc.component';
 import { AddComponenteComponent } from './add-componente/add-componente.component';
 import { AddPerifericoComponent } from './add-periferico/add-periferico.component';
 import { AddPcComponent } from './add-pc/add-pc.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'homepage', component: HomePageComponent },
   { path: 'addpc', component: AddPcComponent },
   { path: 'addperiferico', component: AddPerifericoComponent },
-  { path: 'addcomponent', component: AddComponenteComponent }
+  { path: 'addcomponent', component: AddComponenteComponent },
+  { path: 'updatepc/:id', component: UpdatePcComponent },
 ];
 
 @NgModule({
