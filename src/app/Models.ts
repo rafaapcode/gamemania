@@ -1,5 +1,5 @@
 export interface Cadastro{
-  id: number;
+  id?: number;
   urlImg: string;
   title: string;
   description: string;

@@ -1,16 +1,25 @@
 <div class="container mt-5">
-  <form>
+
+  <form *ngIf="updatePc" [formGroup]="updatePc">
+
     <div class="mb-3">
-      <input type="text" class="form-control" matInput [(ngModel)]="updatePc.urlImg" placeholder="Image Url" name="imgUrl">
+      <input type="number" formControlName="id" class="form-control" placeholder="id" name="id">
     </div>
+
     <div class="mb-3">
-      <input type="text" class="form-control" matInput [(ngModel)]="updatePc.title" placeholder="Title" name="title">
+      <input type="text" formControlName="urlImg" class="form-control" placeholder="Image Url" name="urlImg">
     </div>
+
     <div class="mb-3">
-      <input type="text" class="form-control" matInput [(ngModel)]="updatePc.description" placeholder="Description"
+      <input type="text" formControlName="title" class="form-control" placeholder="Title" name="title">
+    </div>
+
+    <div class="mb-3">
+      <input type="text" formControlName="description" class="form-control" placeholder="description"
         name="description">
     </div>
 
     <button type="submit" class="btn btn-primary" (click)="updateCadastroPc()">Atualizar</button>
+
   </form>
 </div>

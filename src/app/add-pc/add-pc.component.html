@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <form>
     <div class="mb-3">
-      <input type="hidden" class="form-control" matInput [(ngModel)]="addpc.id" placeholder="Image Url" name="imgUrl">
+      <input type="number" class="form-control d-none" matInput [(ngModel)]="addpc.id" placeholder="Image Url" name="id">
     </div>
     <div class="mb-3">
       <input type="text" class="form-control" matInput [(ngModel)]="addpc.urlImg" placeholder="Image Url" name="imgUrl">
@@ -10,7 +10,7 @@
       <input type="text" class="form-control" matInput [(ngModel)]="addpc.title" placeholder="Title" name="title">
     </div>
     <div class="mb-3">
-      <input type="text" class="form-control" matInput [(ngModel)]="addpc.description" placeholder="Description"
+      <input type="text" class="form-control" matInput [(ngModel)]="addpc.description" placeholder="description"
         name="description">
     </div>
 

@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Cadastro } from '../Models';
@@ -33,8 +34,8 @@ export class CadastroPc {
     return this.http.get<Cadastro>(url);
   }
 
-  updateCadastro(cadastro:Cadastro): Observable<Cadastro>{
-    const url = `${this.baseUrl}/${cadastro.id}`;
+  updateCadastro(cadastro:Cadastro, id:number = 0): Observable<Cadastro>{
+    const url = `${this.baseUrl}/${id}`;
     return this.http.put<Cadastro>(url, cadastro);
   }
 }

@@ -23,6 +23,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule} from '@angular/material/sort';
+import { CommonModule } from '@angular/common';
+import { UpdatePcComponent } from './updatePc/update-pc.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { MatSortModule} from '@angular/material/sort';
     HomePageComponent,
     AddPcComponent,
     AddPerifericoComponent,
-    AddComponenteComponent
+    AddComponenteComponent,
+    UpdatePcComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +54,11 @@ import { MatSortModule} from '@angular/material/sort';
     MatSidenavModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

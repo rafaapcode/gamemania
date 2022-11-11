@@ -27,7 +27,6 @@ export class LoginPageComponent implements OnInit {
 
   entrar() {
     let form = this.formCliente.value;
-    console.log(form);
   }
 
   get cliente_nome() { return this.formCliente.get('cliente_name'); };
