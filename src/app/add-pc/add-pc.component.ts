@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AddPcComponent implements OnInit {
 
   addpc:Cadastro = {
+    id: 0,
     urlImg: '',
     title: '',
     description: ''
