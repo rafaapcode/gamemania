@@ -11,26 +11,37 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class UpdatePcComponent implements OnInit {
 
-  public updatePc:FormGroup;
+  public updatePc: FormGroup;
+  public id:number;
 
-  constructor(private fb: FormBuilder, private addpcservice:CadastroPc, private router:Router, private route:ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private addpcservice: CadastroPc, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get("id"));
+    this.id = id;
     this.addpcservice.readById(id).subscribe(pc => {
       this.updatePc = this.fb.group({
         id: [pc.id, Validators.compose([Validators.required])],
         urlImg: [pc.urlImg, Validators.compose([Validators.required])],
-        title:  [pc.title, Validators.compose([Validators.required])],
+        title: [pc.title, Validators.compose([Validators.required])],
         description: [pc.description, Validators.compose([Validators.required])]
       })
     })
   }
 
-  updateCadastroPc():void {
+  updateCadastroPc(): void {
     let form = this.updatePc.value;
     this.addpcservice.updateCadastro(form, form.id).subscribe(pc => {
       this.addpcservice.showmessage('PC atualizado com sucesso !!');
+      setTimeout(() => {
+        this.router.navigate(['/homepage']);
+      }, 2000)
+    })
+  }
+
+  deleteCadastro(): void {
+    this.addpcservice.deleteCadastro(this.id).subscribe(() => {
+      this.addpcservice.showmessage("Pc deletado com Sucesso");
       setTimeout(() => {
         this.router.navigate(['/homepage']);
       }, 2000)

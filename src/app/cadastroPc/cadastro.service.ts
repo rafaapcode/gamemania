@@ -15,27 +15,32 @@ export class CadastroPc {
   constructor(private snackbar: MatSnackBar, private http: HttpClient) { }
 
   showmessage(msg: string): void {
-   this.snackbar.open(msg, 'X', {
-    duration: 6000,
-    verticalPosition: 'bottom'
-   })
+    this.snackbar.open(msg, 'X', {
+      duration: 6000,
+      verticalPosition: 'bottom'
+    })
   }
 
   create(cadastro: Cadastro): Observable<Cadastro> {
     return this.http.post<Cadastro>(this.baseUrl, cadastro);
   }
 
-  read(): Observable<Cadastro[]>{
+  read(): Observable<Cadastro[]> {
     return this.http.get<Cadastro[]>(this.baseUrl);
   }
 
-  readById(id:number): Observable<Cadastro>{
+  readById(id: number): Observable<Cadastro> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get<Cadastro>(url);
   }
 
-  updateCadastro(cadastro:Cadastro, id:number = 0): Observable<Cadastro>{
+  updateCadastro(cadastro: Cadastro, id: number = 0): Observable<Cadastro> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.put<Cadastro>(url, cadastro);
+  }
+
+  deleteCadastro(id: number): Observable<Cadastro> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Cadastro>(url);
   }
 }

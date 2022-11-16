@@ -37,4 +37,9 @@ export class CadastroPeriferico {
     const url = `${this.baseUrl}/${id}`;
     return this.http.put<Cadastro>(url, cadastro);
   }
+
+  deleteCadastro(id: number): Observable<Cadastro> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Cadastro>(url);
+  }
 }
