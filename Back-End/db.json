@@ -15,10 +15,10 @@
   ],
   "component": [
     {
+      "id": 1,
       "urlImg": "https://images.tcdn.com.br/img/img_prod/740836/ubiquiti_unifi_uap_nanohd_access_point_10217_1_02ffa1adc95ecce1cfe386cac9b33ed5.jpg",
-      "title": "Processador Intel",
-      "description": "8 núcleos. 2.5 GHZ",
-      "id": 1
+      "title": "Processador Ryzen",
+      "description": "8 núcleos. 2.5 GHZ"
     }
   ],
   "periferico": [
@@ -29,10 +29,10 @@
       "id": 1
     },
     {
+      "id": 2,
       "urlImg": "https://images.kabum.com.br/produtos/fotos/107333/mouse-gamer-sem-fio-logitech-g-pro-wireless-lightspeed-rgb-lightsync-ambidestro-6-botoes-programaveis-hero-25k-910-005271_1644501564_g.jpg",
-      "title": "Mouse Logitech",
-      "description": "5000 DPI",
-      "id": 2
+      "title": "Mouse Logitech 22",
+      "description": "70000 DPI"
     }
   ]
 }

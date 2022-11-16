@@ -25,6 +25,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule} from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 import { UpdatePcComponent } from './updatePc/update-pc.component';
+import { UpdateComponenteComponent } from './updateComponente/update-componente.component';
+import { UpdatePerifericoComponent } from './updatePeriferico/update-periferico.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { UpdatePcComponent } from './updatePc/update-pc.component';
     AddPcComponent,
     AddPerifericoComponent,
     AddComponenteComponent,
-    UpdatePcComponent
+    UpdatePcComponent,
+    UpdateComponenteComponent,
+    UpdatePerifericoComponent
   ],
   imports: [
     BrowserModule,

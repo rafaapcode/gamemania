@@ -32,4 +32,9 @@ export class CadastroComponent {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get<Cadastro>(url);
   }
+
+  updateCadastro(cadastro:Cadastro, id:number = 0): Observable<Cadastro>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.put<Cadastro>(url, cadastro);
+  }
 }

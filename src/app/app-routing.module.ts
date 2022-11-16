@@ -1,4 +1,6 @@
 import { UpdatePcComponent } from './updatePc/update-pc.component';
+import { UpdatePerifericoComponent } from './updatePeriferico/update-periferico.component'
+import { UpdateComponenteComponent } from './updateComponente/update-componente.component'
 import { AddComponenteComponent } from './add-componente/add-componente.component';
 import { AddPerifericoComponent } from './add-periferico/add-periferico.component';
 import { AddPcComponent } from './add-pc/add-pc.component';
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'addperiferico', component: AddPerifericoComponent },
   { path: 'addcomponent', component: AddComponenteComponent },
   { path: 'updatepc/:id', component: UpdatePcComponent },
+  { path: 'updateperiferico/:id', component: UpdatePerifericoComponent },
+  { path: 'updatecomponente/:id', component: UpdateComponenteComponent },
 ];
 
 @NgModule({
