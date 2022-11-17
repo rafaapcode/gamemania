@@ -10,9 +10,12 @@
 4. Para rodar o site, digite o comando : ``` npm start ```
 5. Acesso o site pelo servidor http://localhost:4200/ 
 
+## Fazendo um CRUD na nossa aplicação, usando o JSON-SERVER.
 
-## Adicionando validação ao nosso Formulário
+- Part 1
+  
+https://user-images.githubusercontent.com/83471941/202322257-1b7bb82a-c7c8-4ce5-ac0b-194a6377eb8b.mp4
 
+- Part 2
 
-https://user-images.githubusercontent.com/83471941/198387530-ce185f8b-8858-4d5a-8597-458b3ddd633e.mp4
-
+https://user-images.githubusercontent.com/83471941/202322300-3bac4d96-7322-480e-8dd5-3e1bed42485a.mp4
