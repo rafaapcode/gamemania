@@ -21,10 +21,10 @@ export class UpdateComponenteComponent implements OnInit {
     this.id = id;
     this.addcomponenteservice.readById(id).subscribe(componente => {
       this.updateComponente = this.fb.group({
-        id: [componente.id, Validators.compose([Validators.required])],
-        urlImg: [componente.urlImg, Validators.compose([Validators.required])],
-        title:  [componente.title, Validators.compose([Validators.required])],
-        description: [componente.description, Validators.compose([Validators.required])]
+        id: [componente.id, [Validators.required]],
+        urlImg: [componente.urlImg, [Validators.required]],
+        title: [componente.title, [Validators.required, Validators.minLength(4)] ],
+        description: [componente.description, [Validators.required]]
       })
     })
   }
@@ -47,4 +47,8 @@ export class UpdateComponenteComponent implements OnInit {
       }, 2000)
     })
   }
+
+  get urlImg() { return this.updateComponente.get('urlImg'); };
+  get title() { return this.updateComponente.get('title'); };
+  get description() { return this.updateComponente.get('description'); };
 }

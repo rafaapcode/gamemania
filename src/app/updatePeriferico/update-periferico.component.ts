@@ -11,25 +11,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class UpdatePerifericoComponent implements OnInit {
 
-  public updatePeriferico:FormGroup;
-  public id:number;
+  public updatePeriferico: FormGroup;
+  public id: number;
 
-  constructor(private fb: FormBuilder, private addperifericoservice:CadastroPeriferico, private router:Router, private route:ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private addperifericoservice: CadastroPeriferico, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get("id"));
     this.id = id;
     this.addperifericoservice.readById(id).subscribe(periferico => {
       this.updatePeriferico = this.fb.group({
-        id: [periferico.id, Validators.compose([Validators.required])],
-        urlImg: [periferico.urlImg, Validators.compose([Validators.required])],
-        title:  [periferico.title, Validators.compose([Validators.required])],
-        description: [periferico.description, Validators.compose([Validators.required])]
+        id: [periferico.id, [Validators.required]],
+        urlImg: [periferico.urlImg, [Validators.required]],
+        title: [periferico.title, [Validators.required, Validators.minLength(4)] ],
+        description: [periferico.description, [Validators.required]]
       })
     })
   }
 
-  updateCadastroPeriferico():void {
+  updateCadastroPeriferico(): void {
+
     let form = this.updatePeriferico.value;
     this.addperifericoservice.updateCadastro(form, form.id).subscribe(pc => {
       this.addperifericoservice.showmessage('Periferico atualizado com sucesso !!');
@@ -37,6 +38,7 @@ export class UpdatePerifericoComponent implements OnInit {
         this.router.navigate(['/homepage']);
       }, 2000)
     })
+
   }
 
   deleteCadastro(): void {
@@ -46,6 +48,11 @@ export class UpdatePerifericoComponent implements OnInit {
         this.router.navigate(['/homepage']);
       }, 2000)
     })
+
   }
+
+  get urlImg() { return this.updatePeriferico.get('urlImg'); };
+  get title() { return this.updatePeriferico.get('title'); };
+  get description() { return this.updatePeriferico.get('description'); };
 
 }

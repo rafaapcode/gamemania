@@ -3,15 +3,15 @@
     {
       "id": 1,
       "urlImg": "https://s2.glbimg.com/iblg262P24909GOK-uF3XGufSHs=/0x0:1000x1000/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/u/z/9yOYmqRmAhhBoJIzSbvg/1computador-gamer-g-fire-intel-core-i3-9100-8gb-ssd-240gb-linux-htg-r711-1595340125-gg.jpg",
-      "title": "PC DELL Gamer",
-      "description": "RTX 1080Ti , Ryzen 9, 32GB RAM"
+      "title": "PC Dell",
+      "description": "I9 9900k"
     }
   ],
   "component": [
     {
       "id": 1,
       "urlImg": "https://images.tcdn.com.br/img/img_prod/740836/ubiquiti_unifi_uap_nanohd_access_point_10217_1_02ffa1adc95ecce1cfe386cac9b33ed5.jpg",
-      "title": "Processador Intel I7 9900k",
+      "title": "I5 5700",
       "description": "16 núcleos,  3.7 GHZ"
     }
   ],
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "urlImg": "https://images.kabum.com.br/produtos/fotos/107333/mouse-gamer-sem-fio-logitech-g-pro-wireless-lightspeed-rgb-lightsync-ambidestro-6-botoes-programaveis-hero-25k-910-005271_1644501564_g.jpg",
-      "title": "Mouse Logitech",
+      "title": "Mouse gamer Logitech",
       "description": "5400 DPI, RGB"
     }
   ]

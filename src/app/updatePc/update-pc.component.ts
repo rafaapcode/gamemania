@@ -21,10 +21,10 @@ export class UpdatePcComponent implements OnInit {
     this.id = id;
     this.addpcservice.readById(id).subscribe(pc => {
       this.updatePc = this.fb.group({
-        id: [pc.id, Validators.compose([Validators.required])],
-        urlImg: [pc.urlImg, Validators.compose([Validators.required])],
-        title: [pc.title, Validators.compose([Validators.required])],
-        description: [pc.description, Validators.compose([Validators.required])]
+        id: [pc.id, [Validators.required]],
+        urlImg: [pc.urlImg, [Validators.required]],
+        title: [pc.title, [Validators.required, Validators.minLength(4)] ],
+        description: [pc.description, [Validators.required]]
       })
     })
   }
@@ -47,5 +47,9 @@ export class UpdatePcComponent implements OnInit {
       }, 2000)
     })
   }
+
+  get urlImg() { return this.updatePc.get('urlImg'); };
+  get title() { return this.updatePc.get('title'); };
+  get description() { return this.updatePc.get('description'); };
 
 }

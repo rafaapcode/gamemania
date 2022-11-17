@@ -10,32 +10,40 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AddPcComponent implements OnInit {
 
-  addpc:Cadastro = {
+  addpc: Cadastro = {
     id: 0,
     urlImg: '',
     title: '',
     description: ''
   }
 
-  updatePc:Cadastro;
+  updatePc: Cadastro;
 
-  constructor(private addpcservice:CadastroPc, private router:Router, private route:ActivatedRoute) { }
+  constructor(private addpcservice: CadastroPc, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
   }
 
-  cadastrarPc(): void{
+  cadastrarPc(): void {
     this.addpcservice.create(this.addpc).subscribe(() => {
       this.addpcservice.showmessage('Pc cadastrado');
-    });
+      setTimeout(() => {
+        this.router.navigate(['/homepage'])
+      }, 3000)
+    },
+      error => {
+        this.addpcservice.showmessage('Banco de dados inativo. Tente novamente mais tarde');
+        setTimeout(() => {
+          this.router.navigate(['/homepage'])
+        }, 3000)
+      }
+    );
 
-    setTimeout(() => {
-      this.router.navigate(['/homepage'])
-    }, 3000)
+
   }
 
-  updateCadastro():void {
+  updateCadastro(): void {
     this.addpcservice.updateCadastro(this.updatePc).subscribe(pc => {
       this.addpcservice.showmessage('PC atualizado com sucesso !!');
       this.router.navigate(['/homepage']);

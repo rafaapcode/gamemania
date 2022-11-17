@@ -17,18 +17,18 @@ export class HomePageComponent implements OnInit {
   cadastrosComponente: Cadastro[]
 
 
-  constructor(private cadastrarPc:CadastroPc, private cadastrarComponent:CadastroComponent, private cadastrarPeriferico:CadastroPeriferico) { }
+  constructor(private cadastrarPc: CadastroPc, private cadastrarComponent: CadastroComponent, private cadastrarPeriferico: CadastroPeriferico) { }
 
   ngOnInit(): void {
-   this.cadastrarPc.read().subscribe(cadastros => {
-     this.cadastrosPc = cadastros;
-   });
-   this.cadastrarComponent.read().subscribe(cadastros => {
-    this.cadastrosComponente = cadastros;
-   })
-   this.cadastrarPeriferico.read().subscribe(cadastros => {
-    this.cadastrosPeriferico = cadastros;
-   })
+    this.cadastrarPc.read().subscribe(cadastros => {
+      this.cadastrosPc = cadastros;
+    });
+    this.cadastrarComponent.read().subscribe(cadastros => {
+      this.cadastrosComponente = cadastros;
+    })
+    this.cadastrarPeriferico.read().subscribe(cadastros => {
+      this.cadastrosPeriferico = cadastros;
+    })
   }
 
 }

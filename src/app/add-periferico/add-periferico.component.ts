@@ -10,24 +10,32 @@ import { Router } from '@angular/router';
 })
 export class AddPerifericoComponent implements OnInit {
 
-  addperiferico:Cadastro = {
+  addperiferico: Cadastro = {
     urlImg: '',
     title: '',
     description: ''
   }
 
-  constructor(private addperifericoservice:CadastroPeriferico, private router:Router) { }
+  constructor(private addperifericoservice: CadastroPeriferico, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  cadastrarPeriferico(): void{
+  cadastrarPeriferico(): void {
     this.addperifericoservice.create(this.addperiferico).subscribe(() => {
       this.addperifericoservice.showmessage('Periferico cadastrado');
-    });
-    setTimeout(() => {
-      this.router.navigate(['/homepage'])
-    }, 3000)
+      setTimeout(() => {
+        this.router.navigate(['/homepage'])
+      }, 3000)
+    },
+      error => {
+        this.addperifericoservice.showmessage('Banco de dados inativo. Tente novamente mais tarde');
+        setTimeout(() => {
+          this.router.navigate(['/homepage'])
+        }, 3000)
+      }
+    );
+
   }
 
 }

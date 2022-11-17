@@ -10,25 +10,33 @@ import { Router } from '@angular/router';
 })
 export class AddComponenteComponent implements OnInit {
 
-  addcomponent:Cadastro = {
+  addcomponent: Cadastro = {
     urlImg: '',
     title: '',
     description: ''
   }
 
-  constructor(private addcomponentservice:CadastroComponent, private router:Router) { }
+  constructor(private addcomponentservice: CadastroComponent, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  cadastrarComponent(): void{
+  cadastrarComponent(): void {
     this.addcomponentservice.create(this.addcomponent).subscribe(() => {
       this.addcomponentservice.showmessage('Componente cadastrado');
-    })
+      setTimeout(() => {
+        this.router.navigate(['/homepage'])
+      }, 3000)
+    },
+      error => {
+        this.addcomponentservice.showmessage('Banco de dados inativo. Tente novamente mais tarde');
+        setTimeout(() => {
+          this.router.navigate(['/homepage'])
+        }, 3000)
+      }
+    )
 
-    setTimeout(() => {
-      this.router.navigate(['/homepage'])
-    }, 3000)
+
   }
 
 }

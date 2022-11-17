@@ -8,15 +8,21 @@
 
     <div class="mb-3">
       <input type="text" formControlName="urlImg" class="form-control" placeholder="Image Url" name="urlImg">
+      <p class="text-danger" *ngIf="(urlImg) && (urlImg.errors) && (urlImg.dirty)">O url da imagem é
+        obrigatória</p>
     </div>
 
     <div class="mb-3">
       <input type="text" formControlName="title" class="form-control" placeholder="Title" name="title">
+      <p class="text-danger" *ngIf="(title) && (title.errors) && (title.dirty)">O título é
+        obrigatório e deve ter pelo menos 4 caracteres</p>
     </div>
 
     <div class="mb-3">
       <input type="text" formControlName="description" class="form-control" placeholder="description"
         name="description">
+        <p class="text-danger" *ngIf="(description) && (description.errors) && (description.dirty)">A descrição é
+          obrigatória</p>
     </div>
 
     <button type="submit" class="btn btn-primary" (click)="updateCadastroPc()">Atualizar</button>
