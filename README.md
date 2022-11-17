@@ -12,10 +12,19 @@
 
 ## Fazendo um CRUD na nossa aplicação, usando o JSON-SERVER.
 
-- Part 1
+## Part 1
   
 https://user-images.githubusercontent.com/83471941/202322257-1b7bb82a-c7c8-4ce5-ac0b-194a6377eb8b.mp4
 
-- Part 2
+## Part 2
 
 https://user-images.githubusercontent.com/83471941/202322300-3bac4d96-7322-480e-8dd5-3e1bed42485a.mp4
+
+
+## Tratamento de Erros
+
+https://user-images.githubusercontent.com/83471941/202525706-e4519f5a-31d7-44c0-9b9a-ba2eb2f29b95.mp4
+
+## Tratamento de Exceções
+
+https://user-images.githubusercontent.com/83471941/202525747-59aa8183-d7ae-4eac-b987-5fc014ea988e.mp4
