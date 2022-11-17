@@ -1,26 +1,26 @@
 {
   "pc": [
     {
-      "id": 2,
-      "urlImg": "https://images-americanas.b2w.io/produtos/1391764411/imagens/pc-gamer-intel-core-i5-8gb-hd-500gb-nvidia-geforce-gt-easypc-light-ii/1391764411_1_large.jpg",
-      "title": "Pc do procino",
-      "description": "Portugues legal rtop++++++++"
+      "id": 1,
+      "urlImg": "https://s2.glbimg.com/iblg262P24909GOK-uF3XGufSHs=/0x0:1000x1000/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/u/z/9yOYmqRmAhhBoJIzSbvg/1computador-gamer-g-fire-intel-core-i3-9100-8gb-ssd-240gb-linux-htg-r711-1595340125-gg.jpg",
+      "title": "PC DELL Gamer",
+      "description": "RTX 1080Ti , Ryzen 9, 32GB RAM"
     }
   ],
   "component": [
     {
       "id": 1,
       "urlImg": "https://images.tcdn.com.br/img/img_prod/740836/ubiquiti_unifi_uap_nanohd_access_point_10217_1_02ffa1adc95ecce1cfe386cac9b33ed5.jpg",
-      "title": "Processador Ryzen",
-      "description": "8 núcleos. 2.5 GHZ"
+      "title": "Processador Intel I7 9900k",
+      "description": "16 núcleos,  3.7 GHZ"
     }
   ],
   "periferico": [
     {
-      "urlImg": "https://ae01.alicdn.com/kf/S5a1f041dabd1415093d77d32d01ec2acr/Bm40rgb-bm40-rgb-40-hot-swappable-pcb-teclado-mec-nico-programado-qmk-firmware-rgb-interruptor-underglow.jpg_Q90.jpg_.webp",
-      "title": "Teclado mecânico",
-      "description": "Personalizável. Switch red",
-      "id": 1
+      "id": 2,
+      "urlImg": "https://images.kabum.com.br/produtos/fotos/107333/mouse-gamer-sem-fio-logitech-g-pro-wireless-lightspeed-rgb-lightsync-ambidestro-6-botoes-programaveis-hero-25k-910-005271_1644501564_g.jpg",
+      "title": "Mouse Logitech",
+      "description": "5400 DPI, RGB"
     }
   ]
 }
