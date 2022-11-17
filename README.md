@@ -21,6 +21,8 @@ https://user-images.githubusercontent.com/83471941/202322257-1b7bb82a-c7c8-4ce5-
 https://user-images.githubusercontent.com/83471941/202322300-3bac4d96-7322-480e-8dd5-3e1bed42485a.mp4
 
 
+# Fazendo a Validação dos Campos
+
 ## Tratamento de Erros
 
 https://user-images.githubusercontent.com/83471941/202525706-e4519f5a-31d7-44c0-9b9a-ba2eb2f29b95.mp4
